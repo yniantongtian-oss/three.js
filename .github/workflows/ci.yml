@@ -12,6 +12,7 @@ permissions:
 
 jobs:
   test:
+    if: github.repository == 'mrdoob/three.js'
     name: Lint, Unit, Unit addons, Circular dependencies & Examples testing
     runs-on: ubuntu-latest
     permissions:
@@ -40,6 +41,7 @@ jobs:
         run: npm run test-e2e-cov
 
   e2e:
+    if: github.repository == 'mrdoob/three.js'
     name: E2E testing
     runs-on: ${{ matrix.os }}
     timeout-minutes: 30

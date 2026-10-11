@@ -16,6 +16,7 @@ permissions:
 
 jobs:
   read-size:
+    if: github.repository == 'mrdoob/three.js'
     name: Tree-shaking
     runs-on: ubuntu-latest
     permissions:
